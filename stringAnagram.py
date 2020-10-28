@@ -27,9 +27,11 @@ def stringAnagram(dictionary, query):
             
         result.append(counter)
 
-    return result
-    # print(dictTab)
+    print(dictTab)
     # print(queryTab)
+
+    return result
+
 
 q = ['a', 'nark', 'bs', 'hack', 'stair']
 dic = ['hack', 'a', 'rank', 'khac', 'ackh', 'kran', 'rankhacker', 'a', 'ab', 'ba', 'stairs', 'raits']
