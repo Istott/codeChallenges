@@ -1,4 +1,4 @@
-def stringAnagram(dictionary, query):
+def stringAnagram(dictionary, query): #sort the lists and then compare!!!! must try
     dictTab = {}
     queryTab = {}
     result = []

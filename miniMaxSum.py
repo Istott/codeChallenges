@@ -37,6 +37,6 @@ def miniMaxSum(arr):
     print(table['tallymin'], table['tallymax'])
 
 
-newArr = [5,5,5,5,5]
+newArr = [1,5,5,5,25]
 
 print(miniMaxSum(newArr))

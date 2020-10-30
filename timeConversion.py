@@ -8,7 +8,6 @@ def timeConversion(s):
         zerohour = '00'
         return zerohour + ':' + minutes + ':' + seconds
 
-
     if amPm == 'AM':
         return s[:-2]
     elif int(hour) == 12 and amPm == 'PM':
