@@ -43,17 +43,19 @@ tar = 4
 print(remove_kth_from_end(arr, tar))
 
 
-def first_not_repeating_character(s):
-    newArr = []
-    stuff = [x for x in s]
-    repeating = [stuff.count(i) > 1 for i in stuff]
+# def first_not_repeating_character(s):
+#     newArr = []
+#     stuff = [x for x in s]
+#     repeating = [stuff.count(i) > 1 for i in stuff]
 
-    for x in range(len(repeating)):
-        if repeating[x] == False:
-            newArr.append(stuff[x])
-            return newArr[0]
+#     for x in range(len(repeating)):
+#         if repeating[x] == False:
+#             newArr.append(stuff[x])
+#             return newArr[0]
     
-    return '_'
+#     return '_'
+
+    
 
 
     
