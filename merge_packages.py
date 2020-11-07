@@ -19,7 +19,7 @@ class Node:
         self.value = value
         self.next = None
 
-def remove_kth_from_end(head: Node, k):
+def remove_kth_from_end(head: Node, k): #this is a linked list duffus
     values = []
     
     cur = head
