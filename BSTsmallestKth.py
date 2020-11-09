@@ -45,7 +45,7 @@ class Solution(object):
             #count my way up to kth node and return node value
 
         
-target = 14
+target = 16
 rootnode = TreeNode(30)
 arr = [2,3,5,6,7,89,9,1,14,23,234,45,13,77,33,55]
 
