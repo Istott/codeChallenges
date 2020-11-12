@@ -1,17 +1,46 @@
 def stringAnagram(dictionary, query):
-    dictTab = [''.join(sorted(x)) for x in dictionary]
-    queryTab = [''.join(sorted(x)) for x in query]
+    # compare length of every string, if equal, then compare for anagram. 
 
-    # result = [dictTab.count(x) for x in queryTab]
+    #sort by length. 
+    #nested loop that compares length. if equal, sort string and compare for anagram.
+
+    dictTab = sorted(dictionary, key=len)
+    queryTab = sorted(query, key=len)
     result = []
+    sortedLen = {}
+    looping = True
+    dictIndex = 0
+    queryIndex = 0
+    counter = 0 #we need a counter that we can append to our results arr and then refresh again. 
 
-    for x in queryTab:
-        counter = 0
-        for j in dictTab:
-            if x == j:
-                counter += 1
-            
-        result.append(counter)
+    #   - if queryTab value length is that same as prev:
+    #       - we want to decrement dictIndex until len(dictTab[dictIndex]) < len(queryTab[queryIndex])
+
+    while looping:
+        if len(queryTab) <= queryIndex:
+            looping = False
+
+        if len(dictTab[dictIndex]) < len(queryTab[queryIndex]):
+            dictIndex += 1
+            continue
+        elif len(dictTab[dictIndex]) > len(queryTab[queryIndex]): 
+            result.append(counter)
+            counter = 0
+            queryIndex += 1
+            continue
+        else:
+            if dictTab[dictIndex] in sortedLen:
+                #sort queryTab[]
+                if ''.join(sorted(dictTab[dictIndex])) == ''.join(sorted(queryTab[queryIndex])):
+                    counter += 1
+            else:
+                sortedLen[len(dictTab[dictIndex])] = len(dictTab[dictIndex])
+
+        
+
+
+
+
 
     # print(dictTab)
     # print(queryTab)
@@ -26,7 +55,22 @@ dic = ['hack', 'a', 'rank', 'khac', 'ackh', 'kran', 'rankhacker', 'a', 'ab', 'ba
 print(stringAnagram(dic, q))
 
 
+###############################
 
+
+    # dictTab = [''.join(sorted(x)) for x in dictionary]
+    # queryTab = [''.join(sorted(x)) for x in query]
+
+    # # result = [dictTab.count(x) for x in queryTab]
+    # result = []
+
+    # for x in queryTab:
+    #     counter = 0
+    #     for j in dictTab:
+    #         if x == j:
+    #             counter += 1
+            
+    #     result.append(counter)
 
 
 #######################################

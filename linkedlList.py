@@ -43,6 +43,20 @@ class LinkedList:
         newNode.next = currentNode.next
         currentNode.next = newNode
 
+    def addToTail(self, value):
+        newNode = Node(value)
+        cur = self.head
+
+        if cur is None:
+            cur.value = newNode.value
+            cur = cur.next
+
+        while cur is not None:
+            cur.value = newNode.value
+            cur = cur.next
+
+        # print(self.head.value)
+        return self.head
 
 
     def remove(self):
@@ -61,7 +75,8 @@ arg = 23
 newNode1 = Node(arg)
 
 myList = LinkedList(newNode1)
-myList.add(newNode1)
+# myList.add(newNode1)
+myList.addToTail(arg)
 # myList.remove(arg)
 
 # myList2 = LinkedList(newNode1)
