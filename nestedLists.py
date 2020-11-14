@@ -1,4 +1,4 @@
-#return the name of the student with the second lowest grade
+#return the name of the student(s) with the second lowest grade
 #if the students tie for the second lowest grade. print them out in alphabetical order
 
 def grades(name): 
