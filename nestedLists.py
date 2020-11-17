@@ -1,5 +1,7 @@
-#return the name of the student with the second lowest grade
+#return the name of the student(s) with the second lowest grade
 #if the students tie for the second lowest grade. print them out in alphabetical order
+
+#simple solution: remove counters. keep lowest names and second lowest names in seperate lists.
 
 def grades(name): 
     names = []
@@ -67,7 +69,8 @@ def grades(name):
 
             doubleSecLow.sort()
 
-            return doubleSecLow[0] + '\n' + doubleSecLow[1]
+            # return doubleSecLow[0] + '\n' + doubleSecLow[1]
+            return "\n".join(doubleSecLow)
         else:
             return names[lowestCounter]
     else:
@@ -77,11 +80,12 @@ def grades(name):
 
             doubleSecLow.sort()
 
-            return doubleSecLow[0] + '\n' + doubleSecLow[1]
+            # return doubleSecLow[0] + '\n' + doubleSecLow[1]
+            return "\n".join(doubleSecLow)
         else:
             return names[1]
 
 students = [['Harry',37.21], ['Berry',37.21], ['Tina', 37.2], ['akriti', 41], ['harsh', 39]]
-students1 = [['Harry',-37.21], ['Berry',-37.21], ['Tina', -37.21], ['akriti', 41]]
+students1 = [['Harry',-39.21], ['Berry',-37.21], ['Tina', -37.21], ['akriti', 41]]
 
 print(grades(students1))
