@@ -19,6 +19,18 @@
 import time
 start_time = time.time()
 
+# def maxInt(arr, num):
+#     highestLow = 0
+#     currentLow = None
+#     for i in range(len(arr)):
+#         if currentLow == None or arr[1] < currentLow:
+#             currentLow = arr[i]
+#         if i % num == 0 or i == len(arr)-1:
+#             if highestLow < currentLow:
+#                 highestLow = currentLow
+#             currentLow = None
+#     return highestLow
+
 def maxInt(arr, num): #solved in 
     highestLow = 0
     currentLow = arr[0]
@@ -43,8 +55,8 @@ def maxInt(arr, num): #solved in
         return highestLow
 
 
-arr1 = [2,1,3,5,243,5,6,7,867,8,234,243,6,768,98,9,99,11111,0]
-number = 2
+arr1 = [2,1,3,5,243,5,6,7]
+number = 4
 
 print(maxInt(arr1, number))
 
@@ -56,8 +68,8 @@ print(maxInt(arr1, number))
 # result 9
 #######################
 
-end_time = time.time()
-print (f"runtime: {end_time - start_time} seconds")
+# end_time = time.time()
+# print (f"runtime: {end_time - start_time} seconds")
 
 
 
@@ -71,48 +83,57 @@ print (f"runtime: {end_time - start_time} seconds")
 
 #######################################
 # def maxInt(arr, num): #solved in 52 mins
-    # maxValue = max(arr)
+#     maxValue = max(arr)
 
-    # subArrNumCounter = 1
-    # subArrCounter = 1
+#     subArrNumCounter = 1
+#     subArrCounter = 1
 
-    # newArr = []
-    # lowestCache = maxValue
+#     newArr = []
+#     lowestCache = maxValue
 
-    # # loop through arr and find the lowest integer within that sub array
+#     # loop through arr and find the lowest integer within that sub array
 
-    # for x in range(len(arr)):
-    #     if subArrCounter < num:
-    #         if len(arr) - 1 == x:
-    #             if lowestCache > arr[x]:
-    #                 newArr.append(arr[x])
-    #                 break
-    #             else:
-    #                 newArr.append(lowestCache)
-    #         else:
-    #             if lowestCache <= arr[x]:
-    #                 subArrCounter += 1
-    #             else:
-    #                 lowestCache = arr[x]
-    #                 subArrCounter += 1
-    #     elif subArrCounter == num:
-    #         if len(arr) - 1 == x:
-    #             if lowestCache > arr[x]:
-    #                 newArr.append(arr[x])
-    #                 break
-    #             else:
-    #                 newArr.append(lowestCache)
-    #         else:
-    #             if lowestCache <= arr[x]:
-    #                 subArrCounter = 1
-    #                 subArrNumCounter += 1
-    #                 newArr.append(lowestCache)
-    #                 lowestCache = maxValue
-    #             else:
-    #                 lowestCache = x
-    #                 subArrCounter = 1
-    #                 subArrNumCounter += 1
-    #                 newArr.append(arr[x])
-    #                 lowestCache = maxValue  
-    # print(newArr)
-    # return max(newArr)
+#     for x in range(len(arr)):
+#         if subArrCounter < num:
+#             if len(arr) - 1 == x:
+#                 if lowestCache > arr[x]:
+#                     newArr.append(arr[x])
+#                     break
+#                 else:
+#                     newArr.append(lowestCache)
+#             else:
+#                 if lowestCache <= arr[x]:
+#                     subArrCounter += 1
+#                 else:
+#                     lowestCache = arr[x]
+#                     subArrCounter += 1
+#         elif subArrCounter == num:
+#             if len(arr) - 1 == x:
+#                 if lowestCache > arr[x]:
+#                     newArr.append(arr[x])
+#                     break
+#                 else:
+#                     newArr.append(lowestCache)
+#             else:
+#                 if lowestCache <= arr[x]:
+#                     subArrCounter = 1
+#                     subArrNumCounter += 1
+#                     newArr.append(lowestCache)
+#                     lowestCache = maxValue
+#                 else:
+#                     lowestCache = x
+#                     subArrCounter = 1
+#                     subArrNumCounter += 1
+#                     newArr.append(arr[x])
+#                     lowestCache = maxValue  
+#     print(newArr)
+#     return max(newArr)
+
+# arr1 = [2,1,3,5,243,5,6,7]
+# number = 4
+
+# print(maxInt(arr1, number))
+
+
+end_time = time.time()
+print (f"runtime: {end_time - start_time} seconds")
