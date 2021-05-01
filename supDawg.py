@@ -53,25 +53,25 @@
 ##########################################
 
 
-def anagram(a, b):
-    if len(a) != len(b):
-        return False, 'Word length doesnt match'
+# def anagram(a, b):
+#     if len(a) != len(b):
+#         return False, 'Word length doesnt match'
 
-    arrA = [x for x in a]
-    arrB = [x for x in b]
+#     arrA = [x for x in a]
+#     arrB = [x for x in b]
 
-    arrA.sort()
-    arrB.sort()
+#     arrA.sort()
+#     arrB.sort()
 
-    if arrA == arrB:
-        return True
-    else:
-        return False, 'not an anagram'
+#     if arrA == arrB:
+#         return True
+#     else:
+#         return False, 'not an anagram'
 
-a = 'bobe'
-b = 'bboe'
+# a = 'bobe'
+# b = 'bboe'
 
-print(anagram(a, b))
+# print(anagram(a, b))
 
 
 # function anagram(a, b){s
@@ -96,3 +96,19 @@ print(anagram(a, b))
 # let arrB = 'bbow'
 
 # console.log(anagram(arrA, arrB))
+
+
+def capRev(x):
+    arr = [i for i in x]
+    newArr = []
+
+    for x in range(len(arr)):
+        if x == 0:
+            newArr.insert(0, arr[x].capitalize())
+        else:
+            newArr.insert(0, arr[x])
+        
+    return ''.join(newArr)
+
+string1 = 'string'
+print(capRev(string1))
