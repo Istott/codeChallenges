@@ -11,6 +11,6 @@ def colorCounter(nums):
 
     return numbersArr
 
-numArr = [,2,3,55,6,6,77,2]
+numArr = [5,2,3,55,6,6,77,2]
 
 print(colorCounter(numArr))
