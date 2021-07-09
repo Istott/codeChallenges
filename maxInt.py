@@ -36,7 +36,7 @@ def maxInt(arr, num): #solved in
     currentLow = arr[0]
 
     for i in range(len(arr)):
-        if (i + 1) % num == 0:
+        if (i + 1) % num == 0: #checks at end of each subarray
             if currentLow > arr[i]:
                 currentLow = arr[i]
 
@@ -45,7 +45,7 @@ def maxInt(arr, num): #solved in
             
             if len(arr) - 1 != i:
                 currentLow = arr[i + 1]
-        else:
+        else: #main check
             if currentLow > arr[i]:
                 currentLow = arr[i]
     
@@ -56,7 +56,7 @@ def maxInt(arr, num): #solved in
 
 
 arr1 = [2,1,3,5,243,5,6,7]
-number = 4
+number = 2
 
 print(maxInt(arr1, number))
 
