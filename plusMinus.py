@@ -22,6 +22,7 @@ def plusMinus(arr):
     print(pos)
     print(neg)
     print(zer)
+    return ''
 
 
 arr = [1,1,0,-1,-1]
