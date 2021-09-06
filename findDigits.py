@@ -3,6 +3,7 @@
 
 def findDigits(nums): #with an array of nums being passed in
     countArr = []
+    memoDic = {}
 
     def individualNum(indexCounter):
         sepNum = [int(x) for x in str(nums[indexCounter])]
@@ -15,7 +16,11 @@ def findDigits(nums): #with an array of nums being passed in
         return countArr.append(count)
 
     for k in range(len(nums)):
-        individualNum(k)
+        if nums[k] not in memoDic:
+            memoDic[k] = nums[k]
+            individualNum(k)
+        else:
+            countArr.append(memoDic[k])
 
     return countArr    
 
