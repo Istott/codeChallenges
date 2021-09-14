@@ -15,7 +15,7 @@ def breakRecords(gameScore):
     }
 
     for x in gameScore:
-        if gameObj['gameNum'] is 0:
+        if gameObj['gameNum'] == 0:
             gameObj['gameNum'] += 1
             gameObj['scoreCard'].append(x)
             gameObj['highScore'] = x

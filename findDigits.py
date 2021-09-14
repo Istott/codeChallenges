@@ -1,5 +1,8 @@
+
+
 # analyze the number given by taking each digit and seeing if it is divisible by the whole number. 
 #count how many are divisible and return that number.
+
 
 def findDigits(nums): #with an array of nums being passed in
     countArr = []
@@ -35,10 +38,9 @@ def findDigit(n): #with a number being passed in one at a time.
 
     return count
 
-  
 
 
-numsArr = [234, 40, 12]
+numsArr = [123,4,23,35,24353,4345,3245]
 numStr = 20
 
 print(findDigits(numsArr))
