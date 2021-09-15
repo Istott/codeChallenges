@@ -1,4 +1,5 @@
-
+# There is a string, s, of lowercase English letters that is repeated infinitely many times. 
+# Given an integer, n, find and print the number of letter a's in the first  letters of the infinite string.
 
 def repeatedString(s, n):
     if len(s) == 1 and s == 'a':
@@ -20,7 +21,7 @@ def repeatedString(s, n):
     
     if divCount >= 1:
         count = count * divCount
-        if moduloCount != 0: #loop with a count of remainder
+        if moduloCount != 0: #loop with the count of remainder
             for x in range(moduloCount):
                 if newStr[x] == 'a':
                     count += 1
